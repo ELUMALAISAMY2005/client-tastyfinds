@@ -11,17 +11,25 @@ document.addEventListener('DOMContentLoaded', function() {
         navList.classList.toggle('active');
     });
 });
-document.addEventListener('DOMContentLoaded', () => {
-    const searchInput = document.getElementById('search-input');
+document.addEventListener('DOMContentLoaded', function() {
+    const navToggle = document.querySelector('.nav-toggle');
+    const navList = document.querySelector('.nav-list');
     const slideshow = document.getElementById('slideshow');
+    const searchBtn = document.getElementById('search-btn');
 
-    searchInput.addEventListener('input', () => {
-        if (searchInput.value.trim() !== '') {
-            slideshow.style.display = 'none'; // Hide slideshow when there's input
+    navToggle.addEventListener('click', function() {
+        navList.classList.toggle('active');
+        if (navList.classList.contains('active')) {
+            // Hide elements in mobile view
+            slideshow.style.display = 'none';
+            searchBtn.style.display = 'none';
         } else {
-            slideshow.style.display = 'flex'; // Show slideshow when input is empty
+            // Show elements when menu is hidden
+            slideshow.style.display = 'block';
+            searchBtn.style.display = 'block';
         }
     });
+    
 });
 
 
