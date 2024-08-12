@@ -6,14 +6,6 @@ const searchInput = document.getElementById('search-input');
 document.addEventListener('DOMContentLoaded', function() {
     const navToggle = document.querySelector('.nav-toggle');
     const navList = document.querySelector('.nav-list');
-
-    navToggle.addEventListener('click', function() {
-        navList.classList.toggle('active');
-    });
-});
-document.addEventListener('DOMContentLoaded', function() {
-    const navToggle = document.querySelector('.nav-toggle');
-    const navList = document.querySelector('.nav-list');
     const slideshow = document.getElementById('slideshow');
     const searchBtn = document.getElementById('search-btn');
 
@@ -31,6 +23,19 @@ document.addEventListener('DOMContentLoaded', function() {
     });
     
 });
+document.addEventListener('DOMContentLoaded', () => {
+    const searchInput = document.getElementById('search-input');
+    const slideshow = document.getElementById('slideshow');
+
+    searchInput.addEventListener('input', () => {
+        if (searchInput.value.trim() !== '') {
+            slideshow.style.display = 'none'; // Hide slideshow when there's input
+        } else {
+            slideshow.style.display = 'flex'; // Show slideshow when input is empty
+        }
+    });
+});
+
 
 
 // event listeners  
