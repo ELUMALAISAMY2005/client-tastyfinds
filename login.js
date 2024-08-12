@@ -15,7 +15,7 @@ document.getElementById('sign-up-form').addEventListener('submit', function(e) {
   const email = document.getElementById('s-email').value;
   const password = document.getElementById('s-password').value;
 
-  fetch('http://localhost:4000/signup', {
+  fetch('https://server-tastyfinds.vercel.app/signup', {
       method: 'POST',
       headers: {
           'Content-Type': 'application/json'
@@ -39,7 +39,7 @@ document.getElementById('sign-in-form').addEventListener('submit', function(e) {
   const email = document.getElementById('email').value;
   const password = document.getElementById('password').value;
 
-  fetch('http://localhost:4000/signin', {
+  fetch('https://server-tastyfinds.vercel.app/signin', {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json'
