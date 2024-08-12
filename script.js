@@ -40,15 +40,19 @@ document.addEventListener('DOMContentLoaded', () => {
 
     navLinks.forEach(link => {
         link.addEventListener('click', (e) => {
-            e.preventDefault();
+            // Check if the link is for internal navigation
+            if (link.getAttribute('href').startsWith('#')) {
+                e.preventDefault();
 
-            const targetId = link.getAttribute('href').substring(1);
-            const targetElement = document.getElementById(targetId);
+                const targetId = link.getAttribute('href').substring(1);
+                const targetElement = document.getElementById(targetId);
 
-            window.scrollTo({
-                top: targetElement.offsetTop,
-                behavior: 'smooth'
-            });
+                // Scroll to the target element
+                window.scrollTo({
+                    top: targetElement.offsetTop,
+                    behavior: 'smooth'
+                });
+            }
         });
     });
 });
