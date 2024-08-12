@@ -375,6 +375,9 @@ p, blockquote {
     .nav-list.active {
         display: flex;
     }
+    #slideshow, #search-btn {
+        display: block; /* Ensure elements are shown by default in mobile view */
+    }
 
     .nav-toggle {
         display: block;
