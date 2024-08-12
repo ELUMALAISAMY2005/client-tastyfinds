@@ -163,7 +163,6 @@ section{
 .button1:hover{
     transform: scale(1.1);
     position: relative;
-    left:45%;
 }
 #button2{
     background-color: green;
