@@ -80,6 +80,11 @@ section{
     
 
 }
+.category-section h2{
+    text-align: center;
+    color: green;
+    padding: 5px;
+}
 .category-slider .cart{
     display: grid;
     grid-template-columns: repeat(10,1fr);
