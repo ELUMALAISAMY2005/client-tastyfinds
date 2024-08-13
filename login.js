@@ -27,7 +27,7 @@ document.getElementById('sign-up-form').addEventListener('submit', function(e) {
       if (data.message === 'Signup data received') {
           window.location.href = 'index.html';
       }
-      if (data.message === 'User already exists') {
+      else if (data.message === 'User already exists') {
         alert('User already exists');
       } 
       else {
