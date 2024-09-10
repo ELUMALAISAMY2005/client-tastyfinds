@@ -26,7 +26,6 @@ document.getElementById('sign-up-form').addEventListener('submit', function(e) {
   .then(data => {
       if (data.message === 'Signup data received') {
           window.location.href = 'index.html';
-          alert('Signup successfully');
       }
       else if (data.message === 'User already exists') {
         alert('User already exists');
